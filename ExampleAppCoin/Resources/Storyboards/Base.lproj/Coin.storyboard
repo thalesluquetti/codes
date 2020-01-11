@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rkJ-Cs-K93">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="8tG-Ht-PHe">
+            <objects>
+                <navigationController id="rkJ-Cs-K93" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QpC-hr-2gm">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QhX-wO-BwU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Np6-VK-lm8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-818" y="108"/>
+        </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SplashViewController" customModule="ExampleAppCoin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LWF-de-dgp">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olá, vamos converter?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSB-gH-flJ">
+                                        <rect key="frame" x="24" y="120" width="327" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhl-lJ-f2H">
+                                        <rect key="frame" x="24" y="177.5" width="327" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.10007604865936272" green="0.26530924661409966" blue="0.46494289340101524" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="xSB-gH-flJ" firstAttribute="leading" secondItem="LWF-de-dgp" secondAttribute="leading" constant="24" id="43S-2K-5fX"/>
+                                    <constraint firstItem="fhl-lJ-f2H" firstAttribute="top" secondItem="xSB-gH-flJ" secondAttribute="bottom" constant="24" id="6q7-on-yiB"/>
+                                    <constraint firstItem="fhl-lJ-f2H" firstAttribute="leading" secondItem="LWF-de-dgp" secondAttribute="leading" constant="24" id="O4V-KA-igX"/>
+                                    <constraint firstAttribute="trailing" secondItem="xSB-gH-flJ" secondAttribute="trailing" constant="24" id="Q3S-ys-Hhd"/>
+                                    <constraint firstAttribute="trailing" secondItem="fhl-lJ-f2H" secondAttribute="trailing" constant="24" id="Zsf-Bw-FhF"/>
+                                    <constraint firstItem="xSB-gH-flJ" firstAttribute="top" secondItem="LWF-de-dgp" secondAttribute="top" constant="120" id="tAO-M8-OXu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LWF-de-dgp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0Qa-M3-d7p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LWF-de-dgp" secondAttribute="trailing" id="4P2-ML-aEf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LWF-de-dgp" secondAttribute="bottom" id="O68-SH-baK"/>
+                            <constraint firstItem="LWF-de-dgp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yfb-Zw-pxN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yPu-5P-l02"/>
+                    <connections>
+                        <outlet property="splashView" destination="LWF-de-dgp" id="dOO-nm-oGP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-82.400000000000006" y="108.39580209895054"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="Ifl-Lg-egf">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="RPG-MI-4r1" customClass="HomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y4B-7V-nCQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWB-pz-mPR">
+                                <rect key="frame" x="164.5" y="323" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bWB-pz-mPR" firstAttribute="centerY" secondItem="Y4B-7V-nCQ" secondAttribute="centerY" id="oN9-uM-pHT"/>
+                            <constraint firstItem="bWB-pz-mPR" firstAttribute="centerX" secondItem="Y4B-7V-nCQ" secondAttribute="centerX" id="r2f-3a-Wbw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wcg-gV-IOr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KNa-KY-uOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="729" y="27"/>
+        </scene>
+    </scenes>
+</document>
