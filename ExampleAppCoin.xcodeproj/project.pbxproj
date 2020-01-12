@@ -36,6 +36,7 @@
 		480EC66323CB8247002F0D73 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480EC66223CB8247002F0D73 /* UIView.swift */; };
 		480EC66623CBAF7E002F0D73 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480EC66523CBAF7E002F0D73 /* ErrorView.swift */; };
 		480EC66823CBAF89002F0D73 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 480EC66723CBAF89002F0D73 /* ErrorView.xib */; };
+		480EC66B23CBBA95002F0D73 /* ForeignExchangeRatesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480EC66A23CBBA95002F0D73 /* ForeignExchangeRatesManager.swift */; };
 		4846CBE523C9607100AB8F0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4846CBE423C9607100AB8F0F /* AppDelegate.swift */; };
 		4846CBE723C9607100AB8F0F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4846CBE623C9607100AB8F0F /* SplashViewController.swift */; };
 		4846CBEA23C9607100AB8F0F /* Coin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4846CBE823C9607100AB8F0F /* Coin.storyboard */; };
@@ -97,6 +98,7 @@
 		480EC66223CB8247002F0D73 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		480EC66523CBAF7E002F0D73 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		480EC66723CBAF89002F0D73 /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
+		480EC66A23CBBA95002F0D73 /* ForeignExchangeRatesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeignExchangeRatesManager.swift; sourceTree = "<group>"; };
 		4846CBE123C9607100AB8F0F /* ExampleAppCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleAppCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4846CBE423C9607100AB8F0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4846CBE623C9607100AB8F0F /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 		480EC65B23CB7C40002F0D73 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				480EC66423CBAF60002F0D73 /* Error */,
 				480EC65C23CB7C4D002F0D73 /* Shimmer.swift */,
 			);
 			path = Components;
@@ -206,6 +209,14 @@
 				480EC66723CBAF89002F0D73 /* ErrorView.xib */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		480EC66923CBB849002F0D73 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4846CBF923C9607200AB8F0F /* ExampleAppCoinTests.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		4846CBD823C9607100AB8F0F = {
@@ -244,7 +255,7 @@
 		4846CBF823C9607200AB8F0F /* ExampleAppCoinTests */ = {
 			isa = PBXGroup;
 			children = (
-				4846CBF923C9607200AB8F0F /* ExampleAppCoinTests.swift */,
+				480EC66923CBB849002F0D73 /* ViewModel */,
 				4846CBFB23C9607200AB8F0F /* Info.plist */,
 			);
 			path = ExampleAppCoinTests;
@@ -305,7 +316,6 @@
 		4846CC1823C9642200AB8F0F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				480EC66423CBAF60002F0D73 /* Error */,
 				480EC65823CB7BDB002F0D73 /* Shimmer */,
 				480EC63C23CA6631002F0D73 /* Cell */,
 				4846CBE623C9607100AB8F0F /* SplashViewController.swift */,
@@ -336,6 +346,7 @@
 		4846CC1B23C9644000AB8F0F /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				480EC66A23CBBA95002F0D73 /* ForeignExchangeRatesManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -662,6 +673,7 @@
 				480EC64A23CB69D7002F0D73 /* DefaultErrorConverter.swift in Sources */,
 				480EC63223CA1A56002F0D73 /* String.swift in Sources */,
 				480EC62E23CA17C1002F0D73 /* SplashViewModel.swift in Sources */,
+				480EC66B23CBBA95002F0D73 /* ForeignExchangeRatesManager.swift in Sources */,
 				480EC64E23CB6F31002F0D73 /* ForeignExchangeRatesBusiness.swift in Sources */,
 				4846CBE523C9607100AB8F0F /* AppDelegate.swift in Sources */,
 				480EC64223CA6C5D002F0D73 /* Decimal.swift in Sources */,

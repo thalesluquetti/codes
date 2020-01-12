@@ -22,6 +22,9 @@ final class RatesTableViewCell: UITableViewCell {
     
     // MARK: - Public methods
     
+    /// Setup cell by model
+    ///
+    /// - Parameter model: RatesTableViewCellViewModel
     func setup(model: RatesTableViewCellViewModel) {
         rateValueLabel?.text = model.valueCoin.toCurrency(initial: model.getImageName())
         coinTitleLabel?.text = model.getTitleCoin()

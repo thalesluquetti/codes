@@ -33,7 +33,7 @@ final class ErrorView: UIView {
     
     // MARK: - Private methods
     
-    @IBAction func retryAction(_ sender: UIButton) {
+    @IBAction private func retryAction(_ sender: UIButton) {
         delegate?.retryAction()
         removeFromSuperview()
     }

@@ -22,6 +22,9 @@ final class CoinConversionSimulationViewModel {
     
     // MARK: Public methods
     
+    /// Setup label screen
+    ///
+    /// - Returns: String
     func setupLabel() -> String {
         return initialCountrySelected ?? ""
     }

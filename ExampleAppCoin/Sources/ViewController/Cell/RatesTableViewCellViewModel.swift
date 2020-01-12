@@ -22,10 +22,16 @@ final class RatesTableViewCellViewModel {
     
     // MARK: - Public methods
     
+    /// Get title by initials coin name
+    ///
+    /// - Returns: String
     func getTitleCoin() -> String {
         return setTitle(by: initialsName)
     }
     
+    /// Get image name = initials coin name
+    ///
+    /// - Returns: String
     func getImageName() -> String {
         return initialsName
     }

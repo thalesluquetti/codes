@@ -23,7 +23,7 @@ final class HomeViewModel {
     
     // MARK: - Private properties
     
-    private var business: ForeignExchangeRatesBusiness?
+    private var manager: ForeignExchangeRatesManager?
     private var foreignExchangeRates: ForeignExchangeRatesModel?
     private var urlPath: String?
     
@@ -34,20 +34,27 @@ final class HomeViewModel {
     
     // MARK: Initializers
     
-    init(business: ForeignExchangeRatesBusiness = ForeignExchangeRatesBusiness()) {
-        self.business = business
+    init(manager: ForeignExchangeRatesManager = ForeignExchangeRatesManager()) {
+        self.manager = manager
     }
     
     // MARK: - Public methods
     
+    /// Setup base coin title label
+    ///
+    /// - Returns: String
     func setupBaseCoinTitleLabel() -> String {
         return indexSelected.value == 0 ? Localizable.titleBrlCoin.localize() : Localizable.titleUsdCoin.localize()
     }
     
+    /// Setup base coin name image
+    ///
+    /// - Returns: String
     func setupBaseCoinImage() -> String {
         return indexSelected.value == 0 ? brlImageName : usdImageName
     }
     
+    /// Set url path by indexSelected
     func setUrlPath() {
         if indexSelected.value == 0 {
             urlPath = "https://api.exchangeratesapi.io/latest?base=BRL"
@@ -55,11 +62,12 @@ final class HomeViewModel {
         }
         urlPath = "https://api.exchangeratesapi.io/latest?base=USD"
     }
-
+    
+    /// Fetch data rates
     func fetchData() {
         statusScreen.value = .loading
         guard let urlPath = urlPath else { return }
-        _ = business?.fetchForeignExchangeRates(urlPath: urlPath) { [weak self] resource in
+        _ = manager?.fetchForeignExchangeRates(urlPath: urlPath) { [weak self] resource in
             guard let weakSelf = self else { return }
             
             resource.success { response in
@@ -73,6 +81,10 @@ final class HomeViewModel {
         }
     }
     
+    /// Get ViewModel cell by index row table view
+    ///
+    /// - Parameter index: Int
+    /// - Returns: RatesTableViewCellViewModel
     func getViewModelCell(index: Int) -> RatesTableViewCellViewModel? {
         guard let rates = foreignExchangeRates?.rates else { return nil }
         switch index {

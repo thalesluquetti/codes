@@ -21,10 +21,12 @@ final class ForeignExchangeRatesBusiness {
     
     // MARK: - Public Methods
     
-    /// fetch simulation anticipation data
+    /// fetch data
     ///
-    /// - Parameter completion: ResourceCompletion<SimulationAnticipationResponse>
-    /// - Returns: SimulationAnticipationResponse
+    /// - Parameters:
+    ///   - urlPath: String
+    ///   - completion: ForeignExchangeRatesModel
+    /// - Returns: RequestProtocol
     func fetchForeignExchangeRates(urlPath: String, completion: @escaping ResourceCompletion<ForeignExchangeRatesModel>) -> RequestProtocol {
         foreignExchangeRatesHTTPRequest.urlPath = urlPath
         return foreignExchangeRatesHTTPRequest.fetch(provider: defaultHTTPProvider, resourceCompletion: completion)

@@ -16,10 +16,16 @@ final class SplashViewModel {
     
     // MARK: - Public Methods
     
+    /// Animation splash name
+    ///
+    /// - Returns: String
     func animationSplash() -> String {
         return nameLottieFile
     }
     
+    /// Setup title screen label
+    ///
+    /// - Returns: String
     func setupTitleLabel() -> String {
         return Localizable.titleSplash.localize()
     }
