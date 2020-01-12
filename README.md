@@ -1,8 +1,7 @@
-# coin
-Example Foreign Exchange Rates
+# Example Foreign Exchange Rates
 An app that lets you do conversion foreign exchange rates.
 
-overview
+# Overview
 
 Architectural overview
 This app was created as MVVM architecture. With a custom provider for best results and manager. 
