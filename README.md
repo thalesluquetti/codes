@@ -4,11 +4,11 @@ An app that lets you do conversion foreign exchange rates.
 # Overview
 
 Architectural overview:
-This app was created as MVVM architecture. With a custom provider for best results and manager. 
+This app was created as MVVM architecture. With a custom provider for best results and easy maintenance. 
 
 Testing:
 For this demonstration, I am only testing the viewModel.
-In the future i am insert snapshot test case for testing viewControllers and create UITests too.
+In the future i will insert snapshot test case for testing viewControllers and create UITests too.
 
 Dependencies:
 These are the dependencies I'm using:
