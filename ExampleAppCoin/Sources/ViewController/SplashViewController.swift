@@ -10,34 +10,38 @@ import Lottie
 import UIKit
 
 final class SplashViewController: UIViewController {
-
-    // MARK: - Constants
-    
-    private let nameLottieFile: String = "splashCoin"
-    private let identifierController: String = "HomeViewController"
-    private let storyboardName: String = "Coin"
     
     // MARK: - Private Properties
     
     private var animationView: LOTAnimationView?
+    private let viewModel: SplashViewModel = SplashViewModel()
 
     // MARK: - Outlets
     
     @IBOutlet private weak var splashView: UIView?
+    @IBOutlet private weak var titleLabel: UILabel? {
+        didSet {
+            titleLabel?.text = viewModel.setupTitleLabel()
+        }
+    }
     
     // MARK: - Override
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addLoading()
-        navigationController?.setNavigationBarHidden(true, animated: false)
+        setupView()
+        addAnimation()
     }
     
     // MARK: - Private Functions
     
-    private func addLoading() {
-        animationView = LOTAnimationView(name: nameLottieFile, bundle: Bundle(for: SplashViewController.self))
+    private func setupView() {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+        
+    private func addAnimation() {
+        animationView = LOTAnimationView(name: viewModel.animationSplash(), bundle: Bundle(for: SplashViewController.self))
         animationView?.loopAnimation = false
         animationView?.backgroundColor = .clear
         
@@ -52,9 +56,8 @@ final class SplashViewController: UIViewController {
     }
     
     private func pushToHome() {
-        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: identifierController)
-        navigationController?.pushViewController(controller, animated: true)
+        let homeViewController = HomeViewController.instantiate()
+        navigationController?.pushViewController(homeViewController, animated: true)
     }
 }
 
