@@ -3,6 +3,12 @@ An app that lets you do conversion foreign exchange rates.
 
 # Overview
 
+![Moeda Real](Images/BR%20case.png)
+![Moeda Dolar](Images/Eua%20case.png)
+![Splash](Images/splash%20case.png)
+![Shimmer](Images/Shimmer%20case.png)
+![Erro](Images/Error%20case.png)
+
 Architectural overview:
 This app was created as MVVM architecture. With a custom provider for best results and easy maintenance. 
 
