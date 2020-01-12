@@ -3,11 +3,11 @@ An app that lets you do conversion foreign exchange rates.
 
 # Overview
 
-![Moeda Real](Images/BR%20case.png)
-![Moeda Dolar](Images/Eua%20case.png)
-![Splash](Images/splash%20case.png)
-![Shimmer](Images/Shimmer%20case.png)
-![Erro](Images/Error%20case.png)
+<img src="Images/splash%20case.png" width="200" height="320">
+<img src="Images/Shimmer%20case.png" width="200" height="320">
+<img src="Images/BR%20case.png" width="200" height="320">
+<img src="Images/Eua%20case.png" width="200" height="320">
+<img src="Images/Error%20case.png" width="200" height="320">
 
 Architectural overview:
 This app was created as MVVM architecture. With a custom provider for best results and easy maintenance. 
